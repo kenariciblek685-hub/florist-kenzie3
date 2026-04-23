@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kenzie Florist | Premium Karangan Bunga Bogor</title>
+    <title>Kenzie Florist | Karangan Bunga Premium Bogor</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -15,17 +15,31 @@
         .btn-filter.active { color: #d4af37; border-color: #d4af37; background: rgba(212, 175, 55, 0.1); }
         .product-card { transition: 0.4s; border: 1px solid #1a1a1a; border-radius: 20px; overflow: hidden; background: #0a0a0a; }
         .product-card:hover { border-color: #d4af37; transform: translateY(-5px); }
+        .testimonial-card { background: #0c0c0c; border: 1px solid #1a1a1a; padding: 25px; border-radius: 20px; }
         .map-frame { border: 1px solid #d4af37; border-radius: 20px; overflow: hidden; filter: grayscale(1) invert(0.9) contrast(1.2); }
     </style>
 </head>
 <body class="pb-20">
 
     <header class="py-16 text-center bg-black border-b border-gray-900">
-        <h1 class="font-luxury text-4xl md:text-6xl text-gold mb-2 tracking-tighter uppercase">KENZIE FLORIST</h1>
-        <p class="text-gray-500 tracking-[0.4em] text-[10px] uppercase font-semibold">Premium Flower Boutique Bogor</p>
+        <h1 class="font-luxury text-5xl md:text-7xl text-gold mb-3 uppercase tracking-tighter">KENZIE FLORIST</h1>
+        <p class="text-gray-500 tracking-[0.4em] text-[11px] uppercase font-semibold">Premium Flower Boutique Bogor</p>
     </header>
 
-    <div class="flex justify-center gap-2 py-6 sticky top-0 bg-black/95 backdrop-blur-md z-50 border-b border-gray-900 overflow-x-auto px-4">
+    <section class="max-w-5xl mx-auto px-6 py-16 text-center border-b border-gray-900">
+        <h2 class="font-luxury text-3xl md:text-5xl text-white mb-8">Kualitas Mewah, Pengerjaan Kilat.</h2>
+        <div class="grid md:grid-cols-2 gap-x-12 gap-y-6 text-left max-w-3xl mx-auto text-gray-300">
+            <p class="text-sm leading-relaxed">Menawarkan karangan bunga papan premium: <span class="text-gold italic">Happy Wedding, Selamat & Sukses, Congratulation, Grand Opening,</span> hingga <span class="text-gray-500 italic">Belasungkawa.</span></p>
+            <ul class="space-y-2 text-[12px] font-light list-disc list-inside">
+                <li>Melayani se-Jabodetabek</li>
+                <li>Pengerjaan Kilat 1-2 Jam Jadi</li>
+                <li>Papan Baru & Bunga Segar Asli</li>
+                <li>Bisa Request Warna & Model</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="flex justify-center gap-2 py-6 sticky top-0 bg-black/95 backdrop-blur-md z-50 border-b border-gray-900 px-4 overflow-x-auto">
         <button onclick="filterCatalog('all', this)" class="btn-filter active">Semua</button>
         <button onclick="filterCatalog('katalog750', this)" class="btn-filter">750k</button>
         <button onclick="filterCatalog('katalog600', this)" class="btn-filter">600k</button>
@@ -33,31 +47,45 @@
     </div>
 
     <main class="max-w-7xl mx-auto px-4 mt-12 min-h-[400px]">
-        <div id="main-catalog" class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            </div>
+        <div id="main-catalog" class="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
     </main>
 
-    <section class="max-w-6xl mx-auto px-4 mt-32 py-20 border-t border-gray-900">
+    <section class="max-w-7xl mx-auto px-4 mt-32 py-20 border-t border-gray-900">
+        <div class="text-center mb-16">
+            <h3 class="font-luxury text-3xl text-gold mb-3 uppercase">Ulasan Pelanggan</h3>
+            <p class="text-gray-500 text-[10px] tracking-widest uppercase italic">Kepercayaan Anda Adalah Prioritas Kami</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="testimonial-card"><p class="text-sm italic text-gray-400 mb-4">"Cepat banget pengerjaannya! Pesan jam 9 pagi, jam 11 sudah sampai di lokasi. Papan bunga mewah."</p><p class="text-gold text-xs font-bold uppercase">- Bambang, Bogor</p></div>
+            <div class="testimonial-card"><p class="text-sm italic text-gray-400 mb-4">"Bunga buketnya estetik banget. Mawar segernya wangi. Pacar saya suka banget. Makasih Kenzie!"</p><p class="text-gold text-xs font-bold uppercase">- Putri, Ciomas</p></div>
+            <div class="testimonial-card"><p class="text-sm italic text-gray-400 mb-4">"Sudah langganan buat kirim ke kantor teman. Selalu tepat waktu dan model papannya up-to-date."</p><p class="text-gold text-xs font-bold uppercase">- Rudi, Jakarta</p></div>
+            <div class="testimonial-card"><p class="text-sm italic text-gray-400 mb-4">"Request model duka cita mendadak tetap dilayani dengan sangat baik. Respon WA-nya jempolan."</p><p class="text-gold text-xs font-bold uppercase">- Fitri, Tajur</p></div>
+            <div class="testimonial-card"><p class="text-sm italic text-gray-400 mb-4">"Papan barunya benar-benar baru, warnanya cerah. Sangat puas dengan pelayanannya."</p><p class="text-gold text-xs font-bold uppercase">- Agung, Bogor Barat</p></div>
+            <div class="testimonial-card"><p class="text-sm italic text-gray-400 mb-4">"Buket hemat tapi kualitas nggak murahan. Cantik banget buat wisuda. Sukses terus Kenzie!"</p><p class="text-gold text-xs font-bold uppercase">- Siti, Ciomas</p></div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 mt-20 py-20 border-t border-gray-900">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div>
                 <h3 class="font-luxury text-3xl text-gold mb-6 uppercase tracking-tighter">Workshop Ciomas</h3>
-                <p class="text-gray-400 text-sm leading-loose mb-8">
-                    📍 <span class="text-white">Lokasi:</span> Jl. Raya Ciomas (Dekat Kantor Pos), Ciomas - Bogor.<br>
+                <p class="text-gray-400 text-sm leading-loose">
+                    📍 <span class="text-white">Lokasi:</span> Ciomas (Dekat Kantor Pos), Bogor.<br>
                     📞 <span class="text-white">WhatsApp:</span> 0813-2039-4039<br>
-                    ⏰ <span class="text-white">Operasional:</span> 24 Jam (Pengerjaan Kilat 1-2 Jam)<br>
-                    🚚 <span class="text-white">Jangkauan:</span> Seluruh Bogor & Jabodetabek.
+                    🚚 <span class="text-white">Pengiriman:</span> Seluruh Jabodetabek.
                 </p>
-                <a href="https://wa.me/6281320394039" class="bg-gold text-black px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-white transition">Konsultasi Gratis</a>
+                <div class="mt-8">
+                    <a href="https://wa.me/6281320394039" class="bg-white text-black px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-gold transition">Pesan Sekarang</a>
+                </div>
             </div>
-            
-            <div class="map-frame h-80 shadow-2xl">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15852.79375102553!2d106.7588147!3d-6.6222888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69cf269f8c635d%3A0x6335123984920677!2sCiomas%2C%20Bogor%20Regency%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1712390000000!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="map-frame h-72 shadow-2xl">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15853.488390886544!2d106.7460399!3d-6.6005748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69cf200d70921f%3A0xc3f6057697491e3b!2sCiomas%2C%20Bogor%20Regency%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1712400000000!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
     <footer class="mt-20 py-10 border-t border-gray-900 text-center">
-        <p class="text-gray-700 text-[8px] uppercase tracking-widest">© 2026 Kenzie Florist - Professional Florist System</p>
+        <p class="text-gray-700 text-[8px] uppercase tracking-widest">© 2026 Kenzie Florist Professional System</p>
     </footer>
 
     <script>
@@ -71,36 +99,32 @@
                 const catalogContainer = document.getElementById('main-catalog');
                 let htmlContent = '';
 
-                // Mulai dari baris ke-2
                 for (let i = 1; i < lines.length; i++) {
-                    const columns = lines[i].split(',').map(c => c.trim());
-                    
-                    // VALIDASI KETAT: Hanya tampilkan jika Nama produk ada dan Harga bukan teks "Harga"
-                    if (columns.length >= 3 && columns[1] !== "" && columns[1] !== "Nama Produk") {
-                        const kat = columns[0];
-                        const nama = columns[1];
-                        const harga = columns[2];
-                        const img = columns[3];
-                        const wa = columns[4] || 'https://wa.me/6281320394039';
+                    const cols = lines[i].split(',').map(c => c.trim());
+                    // Validasi: Abaikan jika Nama kosong atau berisi teks header "Nama Produk"
+                    if (cols.length >= 3 && cols[1] !== "" && cols[1] !== "Nama Produk") {
+                        const kat = cols[0];
+                        const nama = cols[1];
+                        const harga = cols[2];
+                        const img = cols[3];
+                        const wa = cols[4] || 'https://wa.me/6281320394039';
 
                         htmlContent += `
                             <div class="product-item product-card" data-category="${kat}">
-                                <div class="h-60 md:h-80 overflow-hidden">
-                                    <img src="${img}" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" onerror="this.src='https://via.placeholder.com/400x600?text=Kenzie+Florist'">
+                                <div class="h-64 md:h-80 overflow-hidden bg-gray-900">
+                                    <img src="${img}" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/400x600?text=Kenzie+Florist'">
                                 </div>
                                 <div class="p-5">
                                     <h4 class="text-white text-[10px] uppercase font-medium mb-1 truncate">${nama}</h4>
-                                    <p class="text-gold font-bold text-sm mb-4">Rp ${harga}</p>
-                                    <a href="${wa}" target="_blank" class="block w-full text-center bg-white text-black py-2 rounded-lg text-[9px] font-bold uppercase tracking-widest hover:bg-gold transition">Pesan Sekarang</a>
+                                    <p class="text-gold font-bold text-sm mb-4 italic">Rp ${harga}</p>
+                                    <a href="${wa}" target="_blank" class="block w-full text-center bg-white text-black py-2 rounded-lg text-[9px] font-bold uppercase tracking-widest hover:bg-gold transition">Order WA</a>
                                 </div>
                             </div>
                         `;
                     }
                 }
                 catalogContainer.innerHTML = htmlContent;
-            } catch (err) {
-                console.error(err);
-            }
+            } catch (err) { console.error(err); }
         }
 
         function filterCatalog(cat, btn) {
