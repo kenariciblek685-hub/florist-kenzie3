@@ -12,17 +12,16 @@
         .text-gold { color: #d4af37; }
         .product-card { transition: 0.4s; border: 1px solid #1a1a1a; border-radius: 20px; overflow: hidden; background: #0a0a0a; }
         .product-card:hover { border-color: #d4af37; transform: translateY(-5px); }
-        .testimonial-card { background: #0c0c0c; border: 1px solid #1a1a1a; padding: 20px; border-radius: 24px; text-align: center; }
         @keyframes pulse-gold { 0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); } 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); } }
         .pulse-btn { animation: pulse-gold 2s infinite; }
         
-        /* Floating Admin AI Assistant */
-        .ai-assistant { position: fixed; bottom: 25px; right: 25px; z-index: 100; display: flex; flex-direction: column; align-items: flex-end; }
-        .ai-bubble { background: #d4af37; color: black; padding: 10px 18px; border-radius: 15px 15px 2px 15px; font-size: 11px; font-weight: 700; margin-bottom: 8px; border: 2px solid white; box-shadow: 0 10px 20px rgba(0,0,0,0.5); animation: slideUp 0.5s ease-out; }
-        @keyframes slideUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        /* TOMBOL ADMIN AI WA MELAYANG (WAJIB ADA) */
+        .ai-assistant { position: fixed; bottom: 30px; right: 25px; z-index: 9999; display: flex; flex-direction: column; align-items: flex-end; }
+        .ai-bubble { background: #d4af37; color: black; padding: 12px 20px; border-radius: 20px 20px 2px 20px; font-size: 11px; font-weight: 800; margin-bottom: 10px; border: 2px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.8); animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
     </style>
 </head>
-<body class="pb-20">
+<body>
 
     <div class="bg-[#0f0f0f] border-b border-gray-900 py-3 px-4 sticky top-0 z-[60]">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
@@ -41,7 +40,7 @@
         <div class="max-w-4xl mx-auto px-6 py-12 border-y border-gray-900 bg-[#080808]">
             <h2 class="font-luxury text-3xl md:text-5xl text-white mb-8 leading-tight uppercase tracking-tighter">Sampaikan Pesan Bermakna <br> Melalui <span class="italic text-gold">Kemewahan Bunga.</span></h2>
             <div class="grid md:grid-cols-2 gap-8 text-left text-gray-400">
-                <p class="text-sm leading-relaxed">Pemesanan Karangan Bunga Papan Premium & Buket se-Jabodetabek. Pengerjaan <span class="text-white italic font-bold">Cepat Kilat 1-2 Jam Selesai.</span></p>
+                <p class="text-sm leading-relaxed italic">Pemesanan Karangan Bunga Papan Premium & Buket se-Jabodetabek. Pengerjaan <span class="text-white font-bold uppercase tracking-widest">Cepat Kilat 1-2 Jam Selesai.</span></p>
                 <div class="space-y-2 text-[10px] uppercase tracking-[0.2em] text-white">
                     <p>✦ Papan Baru & Bunga Segar</p>
                     <p>✦ Melayani 24 Jam Non-Stop</p>
@@ -55,50 +54,24 @@
         <div id="main-catalog" class="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
     </main>
 
-    <section class="max-w-7xl mx-auto px-4 mt-32 py-20 border-t border-gray-900 text-center">
-        <h3 class="font-luxury text-4xl text-gold mb-16 uppercase tracking-widest">Customer Voice</h3>
-        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div class="testimonial-card">
-                <img src="https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=400" class="w-full h-64 object-cover rounded-2xl mb-4 grayscale hover:grayscale-0 transition duration-500">
-                <p class="text-[12px] italic text-gray-300 mb-4 font-light">"Sangat cepat kilat! Pesan pagi, siang sudah sampai di lokasi. Papan bunganya sangat mewah."</p>
-                <p class="text-gold text-[10px] font-bold uppercase tracking-widest">— Bambang S, Bogor</p>
-            </div>
-            <div class="testimonial-card">
-                <img src="https://images.pexels.com/photos/1166644/pexels-photo-1166644.jpeg?auto=compress&cs=tinysrgb&w=400" class="w-full h-64 object-cover rounded-2xl mb-4 grayscale hover:grayscale-0 transition duration-500">
-                <p class="text-[12px] italic text-gray-400 mb-4 font-light">"Pengerjaan rapi dan cepat. Request duka cita tetap dilayani dengan profesional."</p>
-                <p class="text-gold text-[10px] font-bold uppercase tracking-widest">— Fitri R, Ciomas</p>
-            </div>
-            <div class="testimonial-card">
-                <img src="https://images.pexels.com/photos/1035665/pexels-photo-1035665.jpeg?auto=compress&cs=tinysrgb&w=400" class="w-full h-64 object-cover rounded-2xl mb-4 grayscale hover:grayscale-0 transition duration-500">
-                <p class="text-[12px] italic text-gray-400 mb-4 font-light">"Buket mawarnya rapi dan estetik. Bunga segar asli dan wangi sekali. Sangat puas!"</p>
-                <p class="text-gold text-[10px] font-bold uppercase tracking-widest">— Putri A, Bogor</p>
-            </div>
-        </div>
-    </section>
-
     <section class="max-w-6xl mx-auto px-4 mt-20 py-24 border-t border-gray-900">
         <div class="grid md:grid-cols-2 gap-16 items-center">
             <div class="text-center md:text-left">
                 <h2 class="font-luxury text-4xl text-gold mb-8 uppercase tracking-tighter">Workshop Ciomas</h2>
-                <p class="text-gray-400 text-sm italic">📍 Jl. Raya Laladon (Seberang Ibnu Aqil), Ciherang, Kec. Ciomas, Bogor.</p>
-                <p class="text-gray-400 text-[11px] uppercase tracking-widest mt-4 font-bold">Melayani 24 Jam Non-Stop</p>
+                <p class="text-gray-400 text-sm">📍 Jl. Raya Laladon (Seberang Ibnu Aqil), Ciherang, Kec. Ciomas, Bogor.</p>
+                <p class="text-gray-400 text-[11px] uppercase tracking-widest mt-4 font-bold uppercase">Buka 24 Jam Non-Stop</p>
                 <a href="https://wa.me/6281320394039" class="inline-block mt-8 bg-white text-black px-12 py-4 rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-gold transition shadow-xl">Order via WhatsApp</a>
             </div>
             <div class="h-80 rounded-2xl overflow-hidden border border-gold/30 shadow-2xl">
-                <iframe 
-                    width="100%" 
-                    height="100%" 
-                    frameborder="0" 
-                    src="https://maps.google.com/maps?q=Kenzie%20Florist%20Ciomas%20Bogor&t=&z=15&ie=UTF8&iwloc=&output=embed">
-                </iframe>
+                <iframe width="100%" height="100%" frameborder="0" src="https://maps.google.com/maps?q=Kenzie%20Florist%20Ciomas%20Bogor&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
             </div>
         </div>
     </section>
 
     <div class="ai-assistant">
-        <div class="ai-bubble text-center">Halo! Saya Admin AI Kenzie. <br>Mau pesan bunga cepat kilat? <br>Chat di sini ya!</div>
-        <a href="https://wa.me/6281320394039?text=Halo%20Admin%20Kenzie,%20saya%20butuh%20bantuan%20cepat..." class="bg-[#25d366] p-4 rounded-full shadow-2xl hover:scale-110 transition pulse-btn block">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" viewBox="0 0 16 16">
+        <div class="ai-bubble text-center">Halo! Saya Admin AI Kenzie. <br>Butuh bunga 1 jam jadi? <br>Klik tombol di bawah ya!</div>
+        <a href="https://wa.me/6281320394039?text=Halo%20Admin%20Kenzie,%20saya%20butuh%20bantuan%20AI%20untuk%20order%20bunga..." class="bg-[#25d366] p-4 rounded-full shadow-2xl hover:scale-110 transition pulse-btn block border-2 border-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="white" viewBox="0 0 16 16">
                 <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
         </a>
     </div>
@@ -119,8 +92,8 @@
                             <div class="product-item product-card">
                                 <div class="h-64 md:h-80 overflow-hidden bg-gray-900"><img src="${row[3]}" class="w-full h-full object-cover"></div>
                                 <div class="p-5 text-center">
-                                    <h4 class="text-white text-[10px] uppercase font-medium mb-1 truncate tracking-widest">${row[1]}</h4>
-                                    <p class="text-gold font-bold text-sm mb-4 italic">Rp ${row[2]}</p>
+                                    <h4 class="text-white text-[10px] uppercase font-medium mb-1 truncate tracking-widest font-luxury">${row[1]}</h4>
+                                    <p class="text-gold font-bold text-sm mb-4 italic font-luxury">Rp ${row[2]}</p>
                                     <a href="https://wa.me/6281320394039" target="_blank" class="block w-full text-center bg-white text-black py-2 rounded-lg text-[9px] font-bold uppercase tracking-widest hover:bg-gold transition">Pesan Sekarang</a>
                                 </div>
                             </div>`;
