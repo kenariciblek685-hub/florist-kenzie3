@@ -10,9 +10,11 @@
         body { font-family: 'Poppins', sans-serif; background-color: #050505; color: #ffffff; scroll-behavior: smooth; }
         .font-luxury { font-family: 'Playfair Display', serif; }
         .text-gold { color: #d4af37; }
+        .bg-gold { background-color: #d4af37; }
         .btn-filter { font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em; padding: 10px 20px; border-radius: 99px; transition: 0.3s; color: #777; border: 1px solid #222; }
         .btn-filter.active { color: #d4af37; border-color: #d4af37; background: rgba(212, 175, 55, 0.1); }
         .product-card { transition: 0.4s; border: 1px solid #1a1a1a; border-radius: 20px; overflow: hidden; background: #0a0a0a; }
+        .product-card:hover { border-color: #d4af37; transform: translateY(-5px); }
         .testimonial-card { background: #0c0c0c; border: 1px solid #1a1a1a; padding: 15px; border-radius: 20px; }
         @keyframes pulse-gold { 0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); } 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); } }
         .pulse-btn { animation: pulse-gold 2s infinite; }
@@ -24,75 +26,91 @@
 
     <div class="bg-[#0f0f0f] border-b border-gray-900 py-3 px-4 sticky top-0 z-[60]">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-2 text-gold text-[9px] uppercase font-bold tracking-widest">
-                <span class="flex h-2 w-2 rounded-full bg-gold animate-ping"></span> ONLINE
+            <div class="flex items-center gap-2">
+                <span class="flex h-2 w-2 rounded-full bg-green-500 animate-ping"></span>
+                <p class="text-[9px] uppercase tracking-[0.2em] text-gray-400 font-medium">Fast Response Online</p>
             </div>
-            <a href="https://wa.me/6281320394039" class="bg-white text-black px-4 py-1.5 rounded-full text-[9px] font-bold uppercase transition hover:bg-gold pulse-btn">Konsultasi WhatsApp</a>
+            <a href="https://wa.me/6281320394039" class="bg-gold text-black px-4 py-1.5 rounded-full text-[9px] font-bold uppercase pulse-btn transition hover:bg-white">
+                Hubungi WhatsApp
+            </a>
         </div>
     </div>
 
-    <header class="py-16 text-center">
+    <header class="py-16 text-center bg-black">
         <h1 class="font-luxury text-5xl md:text-8xl text-gold mb-3 uppercase tracking-tighter">KENZIE FLORIST</h1>
-        <p class="text-gray-500 tracking-[0.5em] text-[10px] uppercase font-semibold">The Art of Premium Gifting</p>
+        <p class="text-gray-500 tracking-[0.5em] text-[10px] md:text-[12px] uppercase font-semibold italic">The Art of Premium Gifting</p>
     </header>
 
-    <div class="flex justify-center gap-2 py-8 sticky top-[50px] bg-black/95 backdrop-blur-md z-50 border-y border-gray-900 px-4 overflow-x-auto">
-        <button onclick="filterCatalog('all', this)" class="btn-filter active">Semua</button>
+    <section class="max-w-5xl mx-auto px-6 py-16 text-center border-b border-gray-900">
+        <h2 class="font-luxury text-3xl md:text-5xl text-white mb-10 leading-tight">Sampaikan Pesan Bermakna <br> Melalui <span class="italic text-gold text-4xl md:text-6xl">Kemewahan Bunga.</span></h2>
+        <div class="grid md:grid-cols-2 gap-12 text-left max-w-4xl mx-auto text-gray-400">
+            <div>
+                <p class="text-sm leading-relaxed mb-4">Kami menawarkan pemesanan karangan bunga papan ucapan premium seperti: <span class="text-white">Happy Wedding, Selamat dan Sukses, Selamat Ulang Tahun, Congratulation, Grand Opening, serta Belasungkawa Duka Cita.</span></p>
+            </div>
+            <div class="border-l border-gold/20 pl-8 space-y-3">
+                <p class="text-[11px] uppercase tracking-widest text-white">✦ Melayani se-Jabodetabek</p>
+                <p class="text-[11px] uppercase tracking-widest text-white">✦ Pengerjaan cepat kilat 1-2 jam jadi</p>
+                <p class="text-[11px] uppercase tracking-widest text-white">✦ Stok ready & Papan baru semua</p>
+                <p class="text-[11px] uppercase tracking-widest text-white">✦ Bunga segar asli & Bisa request model</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="flex justify-center gap-2 py-8 sticky top-[48px] bg-black/95 backdrop-blur-md z-50 border-b border-gray-900 px-4 overflow-x-auto">
+        <button onclick="filterCatalog('all', this)" class="btn-filter active">Koleksi Semua</button>
         <button onclick="filterCatalog('katalog750', this)" class="btn-filter">750k</button>
         <button onclick="filterCatalog('katalog600', this)" class="btn-filter">600k</button>
         <button onclick="filterCatalog('katalog150', this)" class="btn-filter">150k</button>
     </div>
 
-    <main class="max-w-7xl mx-auto px-4 mt-12 min-h-[300px]">
-        <div id="main-catalog" class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <p class="col-span-full text-center py-20 text-gray-600">Memuat Katalog Produk...</p>
+    <main class="max-w-7xl mx-auto px-4 mt-12 min-h-[400px]">
+        <div id="main-catalog" class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <p class="col-span-full text-gray-600 animate-pulse">Menghubungkan ke Katalog Kenzie...</p>
         </div>
     </main>
 
-    <section class="max-w-7xl mx-auto px-4 mt-32 py-20 border-t border-gray-900">
+    <section class="max-w-7xl mx-auto px-4 mt-32 py-20 border-t border-gray-900 bg-black">
         <div class="text-center mb-16">
             <h3 class="font-luxury text-4xl text-gold mb-3 uppercase tracking-widest">Customer Voice</h3>
-            <p class="text-gray-600 text-[10px] tracking-[0.3em] uppercase italic text-white">Bukti Nyata Kualitas Dari Pelanggan Kami</p>
+            <p class="text-gray-600 text-[10px] tracking-[0.4em] uppercase italic text-white font-bold">Bukti Nyata Kualitas Dari Pelanggan Kami</p>
         </div>
         <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            
             <div class="testimonial-card text-center">
-                <div class="h-64 mb-4 rounded-xl overflow-hidden border border-gray-800">
-                    <img src="https://i.ibb.co/MDX06vX6/Whats-App-Image-2026-04-06-at-13-29-27-2.jpg" class="w-full h-full object-cover">
+                <div class="h-64 mb-4 rounded-xl overflow-hidden border border-gray-800 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
                 </div>
-                <p class="text-[12px] italic text-gray-400 mb-4 leading-relaxed">"Sangat cepat kilat! Pesan pagi, siang sudah sampai di Tajur. Papan bunganya sangat mewah."</p>
+                <p class="text-[12px] italic text-gray-400 mb-4 leading-relaxed font-light italic text-center">"Sangat cepat kilat! Pesan pagi, siang sudah sampai di Tajur. Papan bunganya sangat mewah."</p>
                 <p class="text-gold text-[10px] font-bold uppercase tracking-widest">— Bambang S, Bogor</p>
             </div>
-
             <div class="testimonial-card text-center">
-                <div class="h-64 mb-4 rounded-xl overflow-hidden border border-gray-800">
-                    <img src="https://i.ibb.co/7x4vWZdW/img.jpg" class="w-full h-full object-cover">
+                <div class="h-64 mb-4 rounded-xl overflow-hidden border border-gray-800 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1550302046-6086700c9f43?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
                 </div>
-                <p class="text-[12px] italic text-gray-400 mb-4 leading-relaxed">"Request model duka cita mendadak tetap dilayani dengan sangat baik. Hasilnya rapi dan bunga segar."</p>
+                <p class="text-[12px] italic text-gray-400 mb-4 leading-relaxed font-light italic text-center">"Request model duka cita mendadak tetap dilayani dengan sangat baik. Pengerjaan beneran cepat."</p>
                 <p class="text-gold text-[10px] font-bold uppercase tracking-widest">— Fitri R, Ciomas</p>
             </div>
-
             <div class="testimonial-card text-center">
-                <div class="h-64 mb-4 rounded-xl overflow-hidden border border-gray-800">
-                    <img src="https://i.ibb.co/NkWq0jg/img.jpg" class="w-full h-full object-cover">
+                <div class="h-64 mb-4 rounded-xl overflow-hidden border border-gray-800 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1561101236-4993699318a6?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
                 </div>
-                <p class="text-[12px] italic text-gray-400 mb-4 leading-relaxed">"Buket mawarnya rapi dan estetik. Bunga segar asli dan wangi sekali. Sangat puas!"</p>
+                <p class="text-[12px] italic text-gray-400 mb-4 leading-relaxed font-light italic text-center">"Buket mawarnya rapi dan estetik. Bunga segar asli dan wangi sekali. Sangat puas!"</p>
                 <p class="text-gold text-[10px] font-bold uppercase tracking-widest">— Putri A, Bogor</p>
             </div>
-
         </div>
     </section>
 
-    <section class="max-w-6xl mx-auto px-4 mt-20 py-20 border-t border-gray-900">
-        <div class="grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
+    <section class="max-w-6xl mx-auto px-4 mt-20 py-24 border-t border-gray-900 text-center md:text-left">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
             <div>
-                <h3 class="font-luxury text-3xl text-gold mb-6 uppercase tracking-tighter">Workshop Ciomas</h3>
-                <p class="text-gray-400 text-sm">📍 Ciomas (Area Kantor Pos), Bogor Regency.</p>
-                <p class="text-gray-400 text-sm mt-2 font-bold">📞 Hotline: 0813-2039-4039</p>
-                <a href="https://wa.me/6281320394039" class="inline-block mt-8 bg-white text-black px-10 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-gold transition shadow-lg shadow-white/5">Pesan Sekarang</a>
+                <h3 class="font-luxury text-4xl text-gold mb-8 uppercase tracking-tighter">Workshop & Studio</h3>
+                <p class="text-gray-400 text-sm italic">📍 Ciomas (Area Kantor Pos), Bogor Regency, Jawa Barat.</p>
+                <p class="text-gray-400 text-sm mt-2 font-bold tracking-widest">📞 Hotline: 0813-2039-4039</p>
+                <div class="mt-12 flex justify-center md:justify-start gap-4">
+                    <a href="https://wa.me/6281320394039" class="bg-white text-black px-12 py-4 rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-gold transition shadow-xl">Konsultasi Desain</a>
+                </div>
             </div>
-            <div class="h-80 rounded-2xl overflow-hidden border border-gold/30 filter grayscale invert contrast-[1.1]">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15852.793261686413!2d106.74903335!3d-6.6210645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c59367e9140f%3A0xc39f60045f2f592!2sCiomas%2C%20Bogor%20Regency%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1712400000000!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="h-80 rounded-2xl overflow-hidden border border-gold/30 filter grayscale invert contrast-[1.1] shadow-2xl">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15852.89887750868!2d106.7554972!3d-6.6190059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c59508d75069%3A0x6b9d88582f6f1784!2sCiomas%2C%20Bogor%20Regency%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1713854000000!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
@@ -115,27 +133,27 @@
                 let html = '';
                 for (let i = 1; i < lines.length; i++) {
                     const row = lines[i].split(',').map(item => item.trim());
-                    // KODE ANTI GAGAL: Selama kategori mengandung kata 'katalog', produk AKAN tampil.
+                    // Cek jika kolom kategori mengandung unsur 'katalog'
                     if (row.length >= 3 && row[0].toLowerCase().includes('katalog') && row[1] !== "") {
                         html += `
                             <div class="product-item product-card" data-category="${row[0]}">
                                 <div class="h-64 md:h-80 overflow-hidden bg-gray-900"><img src="${row[3]}" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/400x600?text=Kenzie+Florist'"></div>
                                 <div class="p-5">
                                     <h4 class="text-white text-[10px] uppercase font-medium mb-1 truncate tracking-widest font-luxury">${row[1]}</h4>
-                                    <p class="text-gold font-bold text-sm mb-4">Rp ${row[2]}</p>
-                                    <a href="${row[4] || 'https://wa.me/6281320394039'}" target="_blank" class="block w-full text-center bg-white text-black py-2 rounded-lg text-[9px] font-bold uppercase tracking-widest hover:bg-gold transition">Pesan Sekarang</a>
+                                    <p class="text-gold font-bold text-sm mb-4 italic">Rp ${row[2]}</p>
+                                    <a href="${row[4] || 'https://wa.me/6281320394039'}" target="_blank" class="block w-full text-center bg-white text-black py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-gold transition">Pesan Sekarang</a>
                                 </div>
                             </div>`;
                     }
                 }
-                container.innerHTML = html;
+                container.innerHTML = html || "<p class='col-span-full text-center text-gray-500 py-20'>Belum ada produk aktif di katalog.</p>";
             } catch (e) { console.error(e); }
         }
         function filterCatalog(cat, btn) {
             document.querySelectorAll('.btn-filter').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             document.querySelectorAll('.product-item').forEach(el => {
-                el.style.display = (cat === 'all' || el.getAttribute('data-category').toLowerCase() === cat.toLowerCase()) ? 'block' : 'none';
+                el.style.display = (cat === 'all' || el.getAttribute('data-category').toLowerCase().includes(cat.toLowerCase())) ? 'block' : 'none';
             });
         }
         window.onload = loadData;
