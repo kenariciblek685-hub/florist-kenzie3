@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kenzie Florist | Premium Karangan Bunga Bogor & Jabodetabek</title>
+    <title>Kenzie Florist | Premium Karangan Bunga Bogor</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -13,64 +13,51 @@
         .bg-gold { background-color: #d4af37; }
         .btn-filter { font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em; padding: 10px 20px; border-radius: 99px; transition: 0.3s; color: #777; border: 1px solid #222; }
         .btn-filter.active { color: #d4af37; border-color: #d4af37; background: rgba(212, 175, 55, 0.1); }
-        .product-card { transition: 0.4s; border: 1px solid #1a1a1a; }
-        .product-card:hover { border-color: #d4af37; transform: translateY(-5px); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1); }
-        .map-container { border: 1px solid #1a1a1a; filter: grayscale(1) invert(0.92) contrast(1.2); border-radius: 20px; overflow: hidden; }
+        .product-card { transition: 0.4s; border: 1px solid #1a1a1a; border-radius: 20px; overflow: hidden; background: #0a0a0a; }
+        .product-card:hover { border-color: #d4af37; transform: translateY(-5px); }
+        .map-frame { border: 1px solid #d4af37; border-radius: 20px; overflow: hidden; filter: grayscale(1) invert(0.9) contrast(1.2); }
     </style>
 </head>
 <body class="pb-20">
 
-    <header class="py-16 text-center bg-black">
+    <header class="py-16 text-center bg-black border-b border-gray-900">
         <h1 class="font-luxury text-4xl md:text-6xl text-gold mb-2 tracking-tighter uppercase">KENZIE FLORIST</h1>
         <p class="text-gray-500 tracking-[0.4em] text-[10px] uppercase font-semibold">Premium Flower Boutique Bogor</p>
     </header>
 
-    <div class="flex justify-center gap-2 py-6 sticky top-0 bg-black/90 backdrop-blur-md z-50 border-y border-gray-900 overflow-x-auto px-4">
+    <div class="flex justify-center gap-2 py-6 sticky top-0 bg-black/95 backdrop-blur-md z-50 border-b border-gray-900 overflow-x-auto px-4">
         <button onclick="filterCatalog('all', this)" class="btn-filter active">Semua</button>
         <button onclick="filterCatalog('katalog750', this)" class="btn-filter">750k</button>
         <button onclick="filterCatalog('katalog600', this)" class="btn-filter">600k</button>
         <button onclick="filterCatalog('katalog150', this)" class="btn-filter">150k</button>
     </div>
 
-    <main class="max-w-7xl mx-auto px-4 mt-12">
+    <main class="max-w-7xl mx-auto px-4 mt-12 min-h-[400px]">
         <div id="main-catalog" class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div id="status-msg" class="col-span-full text-center py-20 text-gray-600 italic tracking-widest text-sm">Menghubungkan ke Google Sheets...</div>
-        </div>
+            </div>
     </main>
 
     <section class="max-w-6xl mx-auto px-4 mt-32 py-20 border-t border-gray-900">
         <div class="grid md:grid-cols-2 gap-12 items-center">
-            
             <div>
-                <h3 class="font-luxury text-3xl md:text-4xl text-gold mb-6 uppercase tracking-tighter">Workshop Kami</h3>
-                <div class="space-y-6 text-gray-300">
-                    <div class="flex items-start gap-4">
-                        <span class="text-gold">📍</span>
-                        <p class="text-sm leading-relaxed">Jl. Raya Ciomas No. 123, <br>Ciomas, Kabupaten Bogor, Jawa Barat 16610</p>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <span class="text-gold">📞</span>
-                        <p class="text-sm leading-relaxed">0813-2039-4039 (Fast Response)</p>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <span class="text-gold">⏰</span>
-                        <p class="text-sm leading-relaxed italic">Melayani Pemesanan 24 Jam<br><span class="text-white">Pengerjaan Kilat 1-2 Jam Selesai</span></p>
-                    </div>
-                </div>
-                <div class="mt-10">
-                    <a href="https://wa.me/6281320394039" class="inline-block bg-white text-black px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-gold transition">Dapatkan Petunjuk Jalan</a>
-                </div>
+                <h3 class="font-luxury text-3xl text-gold mb-6 uppercase tracking-tighter">Workshop Ciomas</h3>
+                <p class="text-gray-400 text-sm leading-loose mb-8">
+                    📍 <span class="text-white">Lokasi:</span> Jl. Raya Ciomas (Dekat Kantor Pos), Ciomas - Bogor.<br>
+                    📞 <span class="text-white">WhatsApp:</span> 0813-2039-4039<br>
+                    ⏰ <span class="text-white">Operasional:</span> 24 Jam (Pengerjaan Kilat 1-2 Jam)<br>
+                    🚚 <span class="text-white">Jangkauan:</span> Seluruh Bogor & Jabodetabek.
+                </p>
+                <a href="https://wa.me/6281320394039" class="bg-gold text-black px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-white transition">Konsultasi Gratis</a>
             </div>
-
-            <div class="map-container h-80 shadow-2xl">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126831.644342838!2d106.7212451515671!3d-6.585987154217117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5b7ad0f8221%3A0x401576d14199aa0!2sCiomas%2C%20Bogor%20Regency%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1712389142010!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+            <div class="map-frame h-80 shadow-2xl">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15852.79375102553!2d106.7588147!3d-6.6222888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69cf269f8c635d%3A0x6335123984920677!2sCiomas%2C%20Bogor%20Regency%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1712390000000!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
-
         </div>
     </section>
 
     <footer class="mt-20 py-10 border-t border-gray-900 text-center">
-        <p class="text-gray-700 text-[8px] uppercase tracking-widest">© 2026 Kenzie Florist - Bogor Premium System</p>
+        <p class="text-gray-700 text-[8px] uppercase tracking-widest">© 2026 Kenzie Florist - Professional Florist System</p>
     </footer>
 
     <script>
@@ -80,14 +67,16 @@
             try {
                 const response = await fetch(csvUrl);
                 const data = await response.text();
-                const lines = data.split('\n').filter(line => line.trim() !== '');
+                const lines = data.split('\n');
                 const catalogContainer = document.getElementById('main-catalog');
                 let htmlContent = '';
 
+                // Mulai dari baris ke-2
                 for (let i = 1; i < lines.length; i++) {
                     const columns = lines[i].split(',').map(c => c.trim());
-                    // Hanya memproses baris yang memiliki data lengkap (Nama & Harga bukan 0)
-                    if (columns.length >= 4 && columns[1] !== "" && columns[2] !== "0") {
+                    
+                    // VALIDASI KETAT: Hanya tampilkan jika Nama produk ada dan Harga bukan teks "Harga"
+                    if (columns.length >= 3 && columns[1] !== "" && columns[1] !== "Nama Produk") {
                         const kat = columns[0];
                         const nama = columns[1];
                         const harga = columns[2];
@@ -95,22 +84,22 @@
                         const wa = columns[4] || 'https://wa.me/6281320394039';
 
                         htmlContent += `
-                            <div class="product-item product-card bg-[#0a0a0a] rounded-2xl overflow-hidden group" data-category="${kat}">
-                                <div class="h-60 md:h-80 overflow-hidden bg-gray-900">
+                            <div class="product-item product-card" data-category="${kat}">
+                                <div class="h-60 md:h-80 overflow-hidden">
                                     <img src="${img}" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" onerror="this.src='https://via.placeholder.com/400x600?text=Kenzie+Florist'">
                                 </div>
                                 <div class="p-5">
                                     <h4 class="text-white text-[10px] uppercase font-medium mb-1 truncate">${nama}</h4>
-                                    <p class="text-gold font-bold text-sm mb-4 italic">Rp ${harga}</p>
+                                    <p class="text-gold font-bold text-sm mb-4">Rp ${harga}</p>
                                     <a href="${wa}" target="_blank" class="block w-full text-center bg-white text-black py-2 rounded-lg text-[9px] font-bold uppercase tracking-widest hover:bg-gold transition">Pesan Sekarang</a>
                                 </div>
                             </div>
                         `;
                     }
                 }
-                catalogContainer.innerHTML = htmlContent || "<p class='col-span-full text-center text-gray-500'>Belum ada produk aktif.</p>";
+                catalogContainer.innerHTML = htmlContent;
             } catch (err) {
-                document.getElementById('status-msg').innerText = "Gagal memuat katalog.";
+                console.error(err);
             }
         }
 
